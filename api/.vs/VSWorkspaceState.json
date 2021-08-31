@@ -6,6 +6,6 @@
     "\\routes",
     "\\views"
   ],
-  "SelectedNode": "\\bin\\www",
+  "SelectedNode": "\\routes\\controller_API.js",
   "PreviewInSolutionExplorer": false
 }
