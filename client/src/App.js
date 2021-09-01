@@ -14,16 +14,50 @@ function App() {
     
     const submitReview = () => {
         Axios.post("http://localhost:9000/Menu/insert",
+        {
+            label: label,
+            description: description,
+            price: price,
+            category: category,
+            image: image
+        });
+            
+        setList([...list, {
+            label: label,
+            description: description,
+            price: price,
+            category: category,
+            image: image
+        },]); 
+    };
+
+
+
+
+    const deleteReview = (labelToDelete) => {
+        Axios.delete(`http://localhost:9000/Menu/delete/${labelToDelete}`);
+    };
+
+
+    const updateReview = () => {
+        Axios.post("http://localhost:9000/Menu/update",
             {
                 label: label,
                 description: description,
                 price: price,
                 category: category,
-                image: image 
-            }).then(() => {
-                alert("sucessfull insert");
+                image: image
             });
+
+        setList([...list, {
+            label: label,
+            description: description,
+            price: price,
+            category: category,
+            image: image
+        },]);
     };
+
 
     useEffect(() => {
         Axios.get("http://localhost:9000/Menu/get").then((response) => {
@@ -62,7 +96,7 @@ function App() {
             </div>
 
             {list.map((val) => {
-                return <h1>{val.label} {val.category} {val.price}</h1>
+                return (<h5>{val.label} {val.description} {val.price} {val.category} {val.image} <button onClick={() => { deleteReview(val.label) }}>Delete</button> <button onClick={updateReview}>Update</button> </h5>)
                 })
             }
              

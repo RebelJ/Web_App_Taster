@@ -15,17 +15,25 @@ router.get("/get", function (req, res) {
 	const get_sql = "SELECT * from items";
 	db.query(get_sql, (err, result) => {
 		res.send(result);
-		console.log("Items is correctly get");
+	//	console.log("Items is correctly get");
 	
+	});	
+});
+
+router.delete("/delete/:labelDelete", function (req, res) {
+	const delete_sql = "DELETE FROM items WHERE label = ?";
+	const label = req.params.labelDelete;
+	db.query(delete_sql, label,(err, result) => {
+		console.log(result);
+
 	});
-
-
 });
 
 
+/*
 router.get("/", function (req, res) {
 	res.send("Items is correctly add");
-});
+});*/
 
 
 
@@ -45,8 +53,7 @@ router.post("/insert", function (req, res) {
 	//	res.render("Items is correctly add");
 	});
 
-
-	//insert into label values ??
+	
 })
 
 module.exports = router; 
