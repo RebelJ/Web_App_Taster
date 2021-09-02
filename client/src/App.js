@@ -10,6 +10,7 @@ import './App.css';
 import React, { useState, useEffect } from 'react';
 import Axios from "axios";
 
+
 function App() {
 
     //Set new value with useState to communicate with the api 
@@ -80,9 +81,8 @@ function App() {
     return (
         <div className="App">
 
-            <h1>Web application</h1>
-
             <div className="form_1" id="section_1">
+                <h1>Web application</h1>
                 <label>Label</label> <input type="text" name="label" onChange = {(e) => {
                         setLabel(e.target.value);
                     }} />
@@ -124,9 +124,9 @@ function App() {
                         <input type="number"  placeholder={val.price} name="price" onChange={(e) => {
                             setPrice(e.target.value);
                         }} />
-                        <input type="text" placeholder={val.image} name="image" onChange={(e) => {
-                            setImage(e.target.value);
-                        }} />
+
+
+                        <img src={val.image} alt={ "./1.jpeg"}/>
 
                         <button onClick={() => { deleteReview(val.label) }}>Delete</button> <button onClick={() => { updateReview(val.label) }}>Update</button> </h5>)
                 })
