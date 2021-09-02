@@ -2,15 +2,74 @@
   text-align: center;
 }
 
-.form{
+.form_1{
     display : flex ;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
+#section_1 {
+    height: 90%;
+    text-align: center;
+    display: table;
+    width: 100%;
+}
+
+#section_1 input {
+    display: table-cell;
+    vertical-align: middle
+}
+
+.form_2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
 .form input{
     width: 100px;
     height: 30px;
     margin : 10px;
+}
+
+.list_1 {
+    width: 100%;
+    margin: 10px;
+}
+
+#section_2 {
+    height: 90%;
+    text-align: center;
+    display: table;
+    width: 70%;
+}
+
+    #section_2 h4 {
+        display: table-cell;
+        vertical-align: middle;
+        margin: 4px 4px;
+        padding: 4px 4px;
+    }
+
+
+input[type=text] {
+    text-align: center;
+    width: 15%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+input[type=number] {
+    text-align: center;
+    width: 15%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+input::placeholder {
+    color: black;
 }
