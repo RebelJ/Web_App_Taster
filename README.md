@@ -1,4 +1,4 @@
-# Web_App_Taster
+# Web_App_Taster V1.0
 Web application build with a node.js back-end and a React.js front-end. 
 
 This application allows you to create, delete, update and retrieve items in a mysql database. 
@@ -6,7 +6,7 @@ An API node.js communicates with the database and a front end in react.js displa
 
 To use this application, 
 
-you must import the database with this command : 
+You need to use a terminal for import the database with this command : 
 
     UNIX shell> mysql crud_db < crud_db_items.sql
 
@@ -19,10 +19,8 @@ you must import the database with this command :
         mysql> use crud_db;
         mysql> source crud_db_items.sql;
 
-
-Then you need to use a terminal to go to the api folder and type the command  :   npm start
+Then go to the api folder and type the command  :   npm start
 
 Then you will have to go to the client folder and type the command : npm start 
 
 In a browser you can use the application via the url: http://localhost:3000/
-
