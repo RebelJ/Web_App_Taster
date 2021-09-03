@@ -24,3 +24,6 @@ Then go to the api folder and type the command  :   npm start
 Then you will have to go to the client folder and type the command : npm start 
 
 In a browser you can use the application via the url: http://localhost:3000/
+
+
+# Test Unit will be write the 8th Semptember 2021
